@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Benchmarker.Demo-20220613-233707</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19044.1706 (21H2)
+AMD Ryzen 5 5500U with Radeon Graphics, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=5.0.302
+  [Host]     : .NET 5.0.8 (5.0.821.31504), X64 RyuJIT
+  DefaultJob : .NET 5.0.8 (5.0.821.31504), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                  Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen 0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>GetFullStringNormally</td><td>4.041 &mu;s</td><td>0.0314 &mu;s</td><td>0.0279 &mu;s</td><td>11.3449</td><td>23 KB</td>
+</tr><tr><td>GetFullStringWithStringBuilder</td><td>1.344 &mu;s</td><td>0.0123 &mu;s</td><td>0.0109 &mu;s</td><td>0.6733</td><td>1 KB</td>
+</tr></tbody></table>
+</body>
+</html>

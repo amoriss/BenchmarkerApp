@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ImportDirectoryBuildProps>false</ImportDirectoryBuildProps>
+    <ImportDirectoryBuildTargets>false</ImportDirectoryBuildTargets>
+    <AssemblyTitle>b9eb29a9-d39b-4ff6-a2d9-c719dba4c7be</AssemblyTitle>
+    <TargetFramework>net5.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>b9eb29a9-d39b-4ff6-a2d9-c719dba4c7be</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <OutputPath>bin\Release</OutputPath>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <UseSharedCompilation>false</UseSharedCompilation>
+    <CodeAnalysisRuleSet></CodeAnalysisRuleSet>
+    <Deterministic>true</Deterministic>
+    <!-- needed for custom build configurations (only "Release" builds are optimized by default) -->
+    <Optimize Condition=" '$(Configuration)' != 'Debug' ">true</Optimize>
+    
+    <!-- we set LangVersion after  which might contain LangVersion copied from the benchmarks project -->
+    <LangVersion Condition="'$(LangVersion)' == '' Or ($([System.Char]::IsDigit('$(LangVersion)', 0)) And '$(LangVersion)' &lt; '7.3')">latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="b9eb29a9-d39b-4ff6-a2d9-c719dba4c7be.notcs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\amori\repos\TimCorey\BenchmarkerApp\Benchmarker\Benchmarker.csproj" />
+  </ItemGroup>
+  <PropertyGroup>
+<ServerGarbageCollection>false</ServerGarbageCollection>
+<ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+</PropertyGroup>
+
+
+</Project>
