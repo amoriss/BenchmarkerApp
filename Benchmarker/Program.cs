@@ -16,7 +16,7 @@ namespace Benchmarker
     [MemoryDiagnoser]
     public class Demo
     {
-        [Benchmark]
+        [Benchmark(Baseline = true)]
         public string GetFullStringNormally()
         {
             string output = "";

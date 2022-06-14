@@ -8,7 +8,7 @@ AMD Ryzen 5 5500U with Radeon Graphics, 1 CPU, 12 logical and 6 physical cores
 
 
 ```
-|                         Method |     Mean |     Error |    StdDev |   Gen 0 | Allocated |
-|------------------------------- |---------:|----------:|----------:|--------:|----------:|
-|          GetFullStringNormally | 4.041 μs | 0.0314 μs | 0.0279 μs | 11.3449 |     23 KB |
-| GetFullStringWithStringBuilder | 1.344 μs | 0.0123 μs | 0.0109 μs |  0.6733 |      1 KB |
+|                         Method |     Mean |     Error |    StdDev | Ratio |   Gen 0 | Allocated |
+|------------------------------- |---------:|----------:|----------:|------:|--------:|----------:|
+|          GetFullStringNormally | 3.444 μs | 0.0681 μs | 0.0909 μs |  1.00 | 11.3487 |     23 KB |
+| GetFullStringWithStringBuilder | 1.146 μs | 0.0060 μs | 0.0053 μs |  0.34 |  0.6733 |      1 KB |
