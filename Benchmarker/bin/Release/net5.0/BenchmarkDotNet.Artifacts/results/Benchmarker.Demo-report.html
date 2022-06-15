@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>Benchmarker.Demo-20220613-234229</title>
+<title>Benchmarker.Demo-20220614-224110</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -16,16 +16,19 @@
 BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19044.1706 (21H2)
 AMD Ryzen 5 5500U with Radeon Graphics, 1 CPU, 12 logical and 6 physical cores
 .NET SDK=5.0.302
-  [Host]     : .NET 5.0.8 (5.0.821.31504), X64 RyuJIT
-  DefaultJob : .NET 5.0.8 (5.0.821.31504), X64 RyuJIT
+  [Host]               : .NET 5.0.8 (5.0.821.31504), X64 RyuJIT
+  .NET 5.0             : .NET 5.0.8 (5.0.821.31504), X64 RyuJIT
+  .NET Framework 4.7.2 : .NET Framework 4.8 (4.8.4510.0), X64 RyuJIT
 </code></pre>
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>                  Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>Gen 0</th><th>Allocated</th>
+<thead><tr><th>                  Method</th><th>           Job</th><th>       Runtime</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>Gen 0</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>GetFullStringNormally</td><td>3.444 &mu;s</td><td>0.0681 &mu;s</td><td>0.0909 &mu;s</td><td>1.00</td><td>11.3487</td><td>23 KB</td>
-</tr><tr><td>GetFullStringWithStringBuilder</td><td>1.146 &mu;s</td><td>0.0060 &mu;s</td><td>0.0053 &mu;s</td><td>0.34</td><td>0.6733</td><td>1 KB</td>
+</thead><tbody><tr><td>GetFullStringNormally</td><td>.NET 5.0</td><td>.NET 5.0</td><td>3.367 &mu;s</td><td>0.0437 &mu;s</td><td>0.0409 &mu;s</td><td>0.40</td><td>11.3487</td><td>23 KB</td>
+</tr><tr><td>GetFullStringWithStringBuilder</td><td>.NET 5.0</td><td>.NET 5.0</td><td>1.111 &mu;s</td><td>0.0079 &mu;s</td><td>0.0074 &mu;s</td><td>0.13</td><td>0.6733</td><td>1 KB</td>
+</tr><tr><td>GetFullStringNormally</td><td>.NET Framework 4.7.2</td><td>.NET Framework 4.7.2</td><td>8.321 &mu;s</td><td>0.0186 &mu;s</td><td>0.0165 &mu;s</td><td>1.00</td><td>11.6882</td><td>24 KB</td>
+</tr><tr><td>GetFullStringWithStringBuilder</td><td>.NET Framework 4.7.2</td><td>.NET Framework 4.7.2</td><td>6.140 &mu;s</td><td>0.0155 &mu;s</td><td>0.0129 &mu;s</td><td>0.74</td><td>2.1362</td><td>4 KB</td>
 </tr></tbody></table>
 </body>
 </html>

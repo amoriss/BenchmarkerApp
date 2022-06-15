@@ -1,4 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Running;
 using System;
 using System.Text;
@@ -13,6 +14,8 @@ namespace Benchmarker
         }
     }
 
+    [SimpleJob(RuntimeMoniker.Net472, baseline:true)]
+    [SimpleJob(RuntimeMoniker.Net50)]
     [MemoryDiagnoser]
     public class Demo
     {
